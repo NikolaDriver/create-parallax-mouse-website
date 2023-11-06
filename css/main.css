@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #141414;
+    --index: calc(1vw + 1vh);
+}
+
+@font-face {
+    font-family: arsenal_f;
+    src: url(../fonts/arsenal-regular.woff2);
+}
+body {
+    background-color: #f0f0f0;
+}
+.magic-list {
+    font-family: arsenal_f, sans-serif;
+    font-size: calc(var(--index) * 2.75);
+    padding: calc(var(--index) * 2.75);
+}
+
+.magic-list__item {
+    cursor: none;
+    color: var(--black);
+    text-decoration: none;
+}
