@@ -60,3 +60,21 @@ border-top: 1.5px solid var(--black);
 .magic-list__item:hover::before {
     transform: translate3d(calc(var(--index) * -5), 0, 0);
 }
+
+.cursor {
+    --width: calc(var(--index) * 22);
+    --height: calc(var(--index) * 14);
+    position: fixed;
+    width: var(--width);
+    height: var(--height);
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.cursor__image {
+    position: relative;
+    width: calc(var(--width) * 2);
+    height: calc(var(--height) * 2);
+
+}
