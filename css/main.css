@@ -77,22 +77,24 @@ border-top: 1.5px solid var(--black);
     z-index: -1;
     will-change: transform;
 }
-
-.cursor__image {
-    position: relative;
-    width: calc(var(--width) * 2);
-    height: calc(var(--height) * 2);
-    top: calc(var(--height) * -.25);
-    left: calc(var(--width) * -.4);
-    background-size: cover;
-    background-position: center;
-    transform: translate3d(calc(var(--move-x) / -5), calc(var(--move-y) / -5), 0) scale(1.5);
-    transition: transform var(--transition-cursor);
-}
-
 .magic-list__item:hover .cursor {
     height: var(--height)
 }
+
+.cursor__image {
+    --cursor-transform:  translate3d(calc(var(--move-x) / -5), calc(var(--move-y) / -5), 0);
+    position: relative;
+    width: calc(var(--width) * 2);
+    height: calc(var(--height) * 2);
+    top: calc(var(--height) * -.4);
+    left: calc(var(--width) * -.25);
+    background-size: cover;
+    background-position: center;
+    transform: var(--cursor-transform) scale(1.5);
+    transition: transform var(--transition-cursor);
+}
+
+
 .magic-list__item:hover .cursor__image {
-    transform: scale(1);
+    transform: var(--cursor-transform) scale(1);
 }
